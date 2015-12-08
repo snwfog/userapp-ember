@@ -57,7 +57,7 @@
 
       var user = this.user = Ember.UserApp.User.create({});
       application.register('ember-userapp:user', user, { instantiate: false, singleton: true });
-      Ember.A(['model', 'controller', 'view', 'route']).forEach(function(component) {
+      Ember.A(['controller', 'view', 'route']).forEach(function(component) {
         application.inject(component, 'user', 'ember-userapp:user');
       });
 
@@ -425,7 +425,7 @@
       },
       oauth: function(providerId, scopes, redirectUri) {
         var self = this;
-        
+
         if (!providerId) {
           return;
         }
