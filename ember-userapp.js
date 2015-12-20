@@ -15,29 +15,29 @@
     }
   });
 
-  Ember.Handlebars.registerHelper('has-permission', function(permissions, options) {
-    if (options.data.view.renderedName == 'application') {
-      Ember.UserApp.resetAtLogin = true;
-    }
+  // Ember.Handlebars.registerHelper('has-permission', function(permissions, options) {
+  //   if (options.data.view.renderedName == 'application') {
+  //     Ember.UserApp.resetAtLogin = true;
+  //   }
 
-    if (Ember.UserApp.user.hasPermission(permissions)) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this);
-    }
-  });
+  //   if (Ember.UserApp.user.hasPermission(permissions)) {
+  //     return options.fn(this);
+  //   } else {
+  //     return options.inverse(this);
+  //   }
+  // });
 
-  Ember.Handlebars.registerHelper('has-feature', function(features, options) {
-    if (options.data.view.renderedName == 'application') {
-      Ember.UserApp.resetAtLogin = true;
-    }
+  // Ember.Handlebars.registerHelper('has-feature', function(features, options) {
+  //   if (options.data.view.renderedName == 'application') {
+  //     Ember.UserApp.resetAtLogin = true;
+  //   }
 
-    if (Ember.UserApp.user.hasFeature(features)) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this);
-    }
-  });
+  //   if (Ember.UserApp.user.hasFeature(features)) {
+  //     return options.fn(this);
+  //   } else {
+  //     return options.inverse(this);
+  //   }
+  // });
 
   Ember.UserApp = Ember.Namespace.create({
     indexRoute: 'index',
